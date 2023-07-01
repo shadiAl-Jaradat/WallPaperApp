@@ -1,0 +1,4 @@
+#Sat Jul 01 22:19:08 EEST 2023
+base.0=/Users/shady-jaradat/StudioProjects/wallpaper_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
