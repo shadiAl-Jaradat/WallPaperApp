@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		r29neMpvs6yM5Vrwfn23z5KhSQs=
+		BjC585cLChysX6NTUieuSeHS56c=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		V3Dsn65z8dBjiG74TitcwQiZLMI=
+		yTx+U/O02RunQ7/S4+Ak53Xx5Yk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		iZsPYyAFAl2kHrjXqvMss5C4gLw=
+		DNx0PRt3+LBi9eXZJewy3D6UsJ4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB</key>
 		<data>
-		HMUi4caXvzx/K7KPk8jOr0uKD3c=
+		exQ9v1G9ZKPD2hEOANYjWPn8hBU=
 		</data>
 		<key>Frameworks/FMDB.framework/Info.plist</key>
 		<data>
@@ -188,26 +188,6 @@
 		<data>
 		iqxdhxDOeG6GKBcMhgGCL00SLGw=
 		</data>
-		<key>Frameworks/flutter_downloader.framework/FlutterDownloaderDatabase.bundle/Info.plist</key>
-		<data>
-		CsuQUEU7oKWlFUwsjr4n+qrrXzA=
-		</data>
-		<key>Frameworks/flutter_downloader.framework/FlutterDownloaderDatabase.bundle/download_tasks.sql</key>
-		<data>
-		y0MCi0XgrAElztFhE2RSHlwa7dg=
-		</data>
-		<key>Frameworks/flutter_downloader.framework/Info.plist</key>
-		<data>
-		ABiFYUzcbKfroVokhVwHtnJVOCc=
-		</data>
-		<key>Frameworks/flutter_downloader.framework/_CodeSignature/CodeResources</key>
-		<data>
-		hSoiHX49Fp+nUEOVRiSiij9Fka8=
-		</data>
-		<key>Frameworks/flutter_downloader.framework/flutter_downloader</key>
-		<data>
-		ZdoVNZE1GfiejYtOEESNUmMVnv8=
-		</data>
 		<key>Frameworks/path_provider_foundation.framework/Info.plist</key>
 		<data>
 		7uqBjP+IKulVYTMTER+VSv9uwus=
@@ -218,7 +198,7 @@
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
 		<data>
-		k4oZf3kZtws2pCsiwrCYne/Ubg8=
+		+MiTBFqzTkZ9+0apdmmAE52VHjA=
 		</data>
 		<key>Frameworks/sqflite.framework/Info.plist</key>
 		<data>
@@ -230,7 +210,7 @@
 		</data>
 		<key>Frameworks/sqflite.framework/sqflite</key>
 		<data>
-		903M5tZLl+kAG/CJu3ZSj6fwVq8=
+		kgjivF/EdGjuDeQlaZg7lGxzxHM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -317,7 +297,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YhHNxz/ddN7eJOdFDY2TzOZA8/sIwDJSYRJYoRfSG8w=
+			neUsOXalrlDDPxfVPf2No4K2rw87tq5LXxWwkQY/gN4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -331,7 +311,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/B1spyAkSVdZs7D+gq3hx9YTsiYiyKOHnEa58s6zNNI=
+			2L4jUm+KIQzSJpQtCNcCEt70ivG/y7eTKU6Lf1zPqeE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -373,7 +353,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ib68aSLb7f4VBj44SO4poSjD1789fSsMh5kXloVEdvE=
+			xOsaggomSbNPNU1rJe5dzEIIfFMK3KpeuD5hy3XFDy0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -401,7 +381,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ffvS/tpBm1c3HFRmio1XEU24/SkyUqdv26bJpgiH95A=
+			SXBvYatc9W+jp7I+tkkrdyQggQgvhjOV3y9L0CP7DXc=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/Info.plist</key>
@@ -565,41 +545,6 @@
 			d80FTlJMKYsTn7JmRt/E1O9oOh+k9tF0xR10Q3ZrKn4=
 			</data>
 		</dict>
-		<key>Frameworks/flutter_downloader.framework/FlutterDownloaderDatabase.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			evr8l6XfUTjhVF9YoUlBC+M/Lz+zg+yYuSVcmqBZFG8=
-			</data>
-		</dict>
-		<key>Frameworks/flutter_downloader.framework/FlutterDownloaderDatabase.bundle/download_tasks.sql</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nnfLGuY6DfqWXzT2lt2BJN2h/zMWJ0428MK8Wa60WwI=
-			</data>
-		</dict>
-		<key>Frameworks/flutter_downloader.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OQtj6C3hYoNd8YwGzooWeZ4177qz9t5EVKqCzCGVq60=
-			</data>
-		</dict>
-		<key>Frameworks/flutter_downloader.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			uGLwWaEKMuHRbpBSFPrBE7njp3jZdGNOEKtJy5Dldqk=
-			</data>
-		</dict>
-		<key>Frameworks/flutter_downloader.framework/flutter_downloader</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hOe9fsRkOogedIeqPVJmlQaPYL+/FVoLPZ2gGXuIblE=
-			</data>
-		</dict>
 		<key>Frameworks/path_provider_foundation.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -618,7 +563,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FF0K1KX69g7R+HiEZQ2zFSLL23sKXfUC8/qTAozqg1Q=
+			ObTbkUW2DEWhdkgIdsm9vHoGvdJa4EgRvwumRInIcmo=
 			</data>
 		</dict>
 		<key>Frameworks/sqflite.framework/Info.plist</key>
@@ -639,7 +584,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0s3cazm9UAhiy/wD6DDDjkg+U5zJyc20pL7KAIP2s50=
+			liJOdk6WHYRO/d21jRTRHWsPrw+ePuChqa8ZIpeQM0U=
 			</data>
 		</dict>
 	</dict>

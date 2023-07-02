@@ -45,6 +45,7 @@ class _BottomBarState extends State<BottomBar> {
             _screens.length, (index) => _screens[index]),
       ),
       extendBody: true,
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: AnimatedNotchBottomBar(
         notchBottomBarController: _controller,
         onTap: (index) {
