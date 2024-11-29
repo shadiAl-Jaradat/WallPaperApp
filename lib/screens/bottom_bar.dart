@@ -4,8 +4,6 @@ import 'package:wallpaper_app/screens/favorite_screen.dart';
 import 'package:wallpaper_app/screens/home_screen.dart';
 import 'package:wallpaper_app/screens/search_screen.dart';
 
-
-
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
 
@@ -14,16 +12,10 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-
   final _pageController = PageController(initialPage: 0);
   final _controller = NotchBottomBarController(index: 0);
 
-
-  final List<Widget> _screens = [
-    HomeScreen(),
-    SearchScreen(),
-    const FavoriteScreen()
-  ];
+  final List<Widget> _screens = [const HomeScreen(), const SearchScreen(), const FavoriteScreen()];
 
   @override
   void dispose() {
@@ -41,53 +33,32 @@ class _BottomBarState extends State<BottomBar> {
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: List.generate(
-            _screens.length, (index) => _screens[index]),
+        children: List.generate(_screens.length, (index) => _screens[index]),
       ),
       extendBody: true,
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: AnimatedNotchBottomBar(
         notchBottomBarController: _controller,
-        onTap: (index) {
-          _pageController.jumpToPage(index);
-        },
+        onTap: (index) => _pageController.jumpToPage(index),
         bottomBarItems: const [
           BottomBarItem(
-            inActiveItem: Icon(
-              Icons.home_filled,
-              color: Colors.blueGrey,
-            ),
-            activeItem: Icon(
-              Icons.home_filled,
-              color: Color(0xff01a081),
-            ),
+            inActiveItem: Icon(Icons.home_filled, color: Colors.blueGrey),
+            activeItem: Icon(Icons.home_filled, color: Color(0xff01a081)),
             itemLabel: 'Home',
           ),
-
           BottomBarItem(
-            inActiveItem: Icon(
-              Icons.search,
-              color: Colors.blueGrey,
-            ),
-            activeItem: Icon(
-              Icons.search,
-              color: Color(0xff01a081),
-            ),
+            inActiveItem: Icon(Icons.search, color: Colors.blueGrey),
+            activeItem: Icon(Icons.search, color: Color(0xff01a081)),
             itemLabel: 'Search',
           ),
-
           BottomBarItem(
-            inActiveItem: Icon(
-              Icons.favorite,
-              color: Colors.blueGrey,
-            ),
-            activeItem: Icon(
-              Icons.favorite,
-              color: Color(0xff01a081),
-            ),
+            inActiveItem: Icon(Icons.favorite, color: Colors.blueGrey),
+            activeItem: Icon(Icons.favorite, color: Color(0xff01a081)),
             itemLabel: 'Favorite',
           ),
         ],
+        kIconSize: 30,
+        kBottomRadius: 20,
       ),
     );
   }

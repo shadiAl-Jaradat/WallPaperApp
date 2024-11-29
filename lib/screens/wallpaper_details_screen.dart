@@ -1,46 +1,35 @@
 import 'dart:io';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as path;
-import 'package:path_provider/path_provider.dart' as pathProvider;
+import 'package:path_provider/path_provider.dart' as pr;
 import 'package:http/http.dart' as http;
 import '../models/favorite_wallpaper_model.dart';
 import '../models/wallpaper.dart';
 import '../services/database_service.dart';
 
-
-
 Future<void> downloadImage(String url) async {
   final response = await http.get(Uri.parse(url));
 
-  // Get the image name
   final imageName = path.basename(url);
-  // Get the document directory path
-  final appDir = await pathProvider.getApplicationDocumentsDirectory();
-
-  // This is the saved image path
-  // You can use it to display the saved image later
+  final appDir = await pr.getApplicationDocumentsDirectory();
   final localPath = path.join(appDir.path, imageName);
-
-  // Downloading
   final imageFile = File(localPath);
   await imageFile.writeAsBytes(response.bodyBytes);
 }
+
 class WallpaperDetailsScreen extends StatefulWidget {
   final Wallpaper wallpaper;
 
-  WallpaperDetailsScreen({required this.wallpaper});
+  const WallpaperDetailsScreen({super.key, required this.wallpaper});
 
   @override
-  State<WallpaperDetailsScreen> createState() =>
-      _WallpaperDetailsScreenState(wallpaper: wallpaper);
+  State<WallpaperDetailsScreen> createState() => _WallpaperDetailsScreenState();
 }
 
 class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
-  final Wallpaper wallpaper;
   bool isFavorite = false;
 
-  _WallpaperDetailsScreenState({required this.wallpaper});
+  _WallpaperDetailsScreenState();
 
   double? screenHeight;
   double? screenWidth;
@@ -53,30 +42,21 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
 
   Future<void> checkFavoriteStatus() async {
     final favoriteWallpapers = await DatabaseProvider.getAllFavoriteWallpapers();
-    setState(() {
-      isFavorite = favoriteWallpapers
-          .any((favWallpaper) => favWallpaper.id == wallpaper.id);
-    });
+    setState(() => isFavorite = favoriteWallpapers.any((favWallpaper) => favWallpaper.id == widget.wallpaper.id));
   }
 
   Future<void> addToFavorites() async {
     final favoriteWallpaper = FavoriteWallpaper(
-      id: wallpaper.id,
-      imageUrl: wallpaper.imageUrl,
+      id: widget.wallpaper.id,
+      imageUrl: widget.wallpaper.imageUrl,
     );
-
     await DatabaseProvider.insertFavoriteWallpaper(favoriteWallpaper);
-
-    setState(() {
-      isFavorite = true;
-    });
+    setState(() => isFavorite = true);
   }
 
   Future<void> removeFromFavorites() async {
-    await DatabaseProvider.deleteFavoriteWallpaper(wallpaper.id);
-    setState(() {
-      isFavorite = false;
-    });
+    await DatabaseProvider.deleteFavoriteWallpaper(widget.wallpaper.id);
+    setState(() => isFavorite = false);
   }
 
   @override
@@ -84,19 +64,12 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xff01a081),
-        title: Text('Wallpaper Details'),
-      ),
+      appBar: AppBar(backgroundColor: const Color(0xff01a081), title: const Text('Wallpaper Details')),
       body: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
+        onTap: () => Navigator.pop(context),
         child: Column(
           children: [
-            SizedBox(
-              height: screenHeight! * 0.05,
-            ),
+            SizedBox(height: screenHeight! * 0.05),
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.9,
@@ -104,7 +77,7 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   image: DecorationImage(
-                    image: CachedNetworkImageProvider(wallpaper.imageUrl),
+                    image: NetworkImage(widget.wallpaper.imageUrl),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -113,24 +86,10 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                IconButton(icon: const Icon(Icons.download), onPressed: () => downloadImage(widget.wallpaper.imageUrl)),
                 IconButton(
-                  icon: Icon(Icons.download),
-                  onPressed: () {
-                    downloadImage(wallpaper.imageUrl);
-                  },
-                ),
-                IconButton(
-                  icon: Icon(
-                    isFavorite ? Icons.favorite : Icons.favorite_border,
-                    color: isFavorite ? Colors.red : null,
-                  ),
-                  onPressed: () {
-                    if (isFavorite) {
-                      removeFromFavorites();
-                    } else {
-                      addToFavorites();
-                    }
-                  },
+                  icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border, color: isFavorite ? Colors.red : null),
+                  onPressed: () => isFavorite ? removeFromFavorites() : addToFavorites(),
                 ),
               ],
             ),

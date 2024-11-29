@@ -5,9 +5,7 @@ import 'package:wallpaper_app/services/api_service.dart';
 class WallpaperProvider extends ChangeNotifier {
   List<Wallpaper> _wallpapers = [];
 
-  List<Wallpaper> getWallpapers() {
-    return _wallpapers;
-  }
+  List<Wallpaper> getWallpapers() => _wallpapers;
 
   Future<void> fetchWallpapers() async {
     _wallpapers = await ApiService.fetchRandomWallpapers();

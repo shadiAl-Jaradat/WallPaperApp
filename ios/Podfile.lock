@@ -1,38 +1,30 @@
 PODS:
   - Flutter (1.0.0)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - sqflite (0.0.3):
+  - sqflite_darwin (0.0.4):
     - Flutter
-    - FMDB (>= 2.7.5)
+    - FlutterMacOS
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
-  - sqflite (from `.symlinks/plugins/sqflite/ios`)
-
-SPEC REPOS:
-  trunk:
-    - FMDB
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
   path_provider_foundation:
-    :path: ".symlinks/plugins/path_provider_foundation/ios"
-  sqflite:
-    :path: ".symlinks/plugins/sqflite/ios"
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  sqflite_darwin:
+    :path: ".symlinks/plugins/sqflite_darwin/darwin"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
-  sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
 
-PODFILE CHECKSUM: fcbb2dbedbccc84cd7881fd9c004d55967394aea
+PODFILE CHECKSUM: ae0e90fa5b8cd0b5be703002aa070f56b487105a
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

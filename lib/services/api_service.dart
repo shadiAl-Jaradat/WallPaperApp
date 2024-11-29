@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:wallpaper_app/models/wallpaper.dart';
 
@@ -16,9 +15,7 @@ class ApiService {
       if (response.statusCode == 200) {
         final data = response.data;
         final wallpapersData = data['photos'] as List<dynamic>;
-        final wallpapers = wallpapersData
-            .map((wallpaperData) => Wallpaper.fromJson(wallpaperData))
-            .toList();
+        final wallpapers = wallpapersData.map((wallpaperData) => Wallpaper.fromJson(wallpaperData)).toList();
         return wallpapers;
       } else {
         throw Exception('Failed to fetch wallpapers');
@@ -27,8 +24,6 @@ class ApiService {
       throw Exception('Failed to fetch wallpapers: $error');
     }
   }
-
-
 
   static Future<List<Wallpaper>> searchWallpapers(String query) async {
     final dio = Dio();
@@ -42,9 +37,7 @@ class ApiService {
       if (response.statusCode == 200) {
         final data = response.data;
         final wallpapersData = data['photos'] as List<dynamic>;
-        final wallpapers = wallpapersData
-            .map((wallpaperData) => Wallpaper.fromJson(wallpaperData))
-            .toList();
+        final wallpapers = wallpapersData.map((wallpaperData) => Wallpaper.fromJson(wallpaperData)).toList();
         return wallpapers;
       } else {
         throw Exception('Failed to fetch wallpapers');
@@ -53,5 +46,4 @@ class ApiService {
       throw Exception('Failed to fetch wallpapers: $error');
     }
   }
-
 }

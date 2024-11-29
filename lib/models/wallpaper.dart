@@ -3,16 +3,7 @@ class Wallpaper {
   final String imageUrl;
   final bool isFavorite;
 
-  Wallpaper({
-    required this.id,
-    required this.imageUrl,
-    this.isFavorite = false,
-  });
+  Wallpaper({required this.id, required this.imageUrl, this.isFavorite = false});
 
-  factory Wallpaper.fromJson(Map<String, dynamic> json) {
-    return Wallpaper(
-      id: json['id'],
-      imageUrl: json['src']['original'],
-    );
-  }
+  factory Wallpaper.fromJson(Map<String, dynamic> json) => Wallpaper(id: json['id'], imageUrl: json['src']['original']);
 }
