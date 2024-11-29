@@ -31,7 +31,7 @@ Here are the key packages that power this application:
 | [**path_provider**](https://pub.dev/packages/path_provider)| For accessing commonly used locations on the device file system.                          |
 | [**sqflite**](https://pub.dev/packages/sqflite)           | To implement a local SQLite database for managing favorites.                              |
 | [**shimmer**](https://pub.dev/packages/shimmer)           | For skeleton loading animations to improve user experience during data fetching.          |
-| [**animated_notch_bottom_bar**](https://pub.dev/packages/animated_notch_bottom_bar) | For an animated and visually appealing bottom navigation bar. |
+
 
 ---
 
