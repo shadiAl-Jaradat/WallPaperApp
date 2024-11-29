@@ -52,6 +52,12 @@ Manage your personalized collection of wallpapers.
 
 <img width="450" alt="Favorites Screen" src="https://github.com/shadiAl-Jaradat/WallPaperApp/assets/94618324/36f8847e-36e1-4bb4-9b57-9d56e445a0cc">
 
+
+### Animated Bottom Navigation Bar
+
+![hh](https://github.com/user-attachments/assets/54ddbaeb-82a8-4f57-8327-bfc2139e4bfb)
+
+
 ---
 
 ## Features
