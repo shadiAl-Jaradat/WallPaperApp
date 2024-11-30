@@ -26,9 +26,10 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color(0xff01a081),
-        title: const Center(child: Text('Wallpaper App')),
+        title: const Center(child: Text('Wallpaper App', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
       ),
       body: PageView(
         controller: _pageController,
@@ -57,8 +58,8 @@ class _BottomBarState extends State<BottomBar> {
             itemLabel: 'Favorite',
           ),
         ],
-        kIconSize: 30,
-        kBottomRadius: 20,
+        kIconSize: 22,
+        kBottomRadius: 24,
       ),
     );
   }
