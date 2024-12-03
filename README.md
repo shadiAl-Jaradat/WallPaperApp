@@ -27,8 +27,6 @@ Here are the key packages that power this application:
 |----------------------------|----------------------------------------------------------------------------------------------|
 | [**dio**](https://pub.dev/packages/dio)                   | For making HTTP requests to the Pexels API.                                                 |
 | [**provider**](https://pub.dev/packages/provider)         | For efficient state management across the app.                                             |
-| [**path**](https://pub.dev/packages/path)                 | Provides utilities for manipulating file paths.                                            |
-| [**path_provider**](https://pub.dev/packages/path_provider)| For accessing commonly used locations on the device file system.                          |
 | [**sqflite**](https://pub.dev/packages/sqflite)           | To implement a local SQLite database for managing favorites.                              |
 | [**shimmer**](https://pub.dev/packages/shimmer)           | For skeleton loading animations to improve user experience during data fetching.          |
 
